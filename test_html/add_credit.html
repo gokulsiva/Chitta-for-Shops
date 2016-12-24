@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sree Vanee Silk</title>
+	<script type="text/javascript">
+
+	function ValidateForm(form) {
+		if (form.company_name.selectedIndex == 0 ){
+			alert("Please select a company");
+		}
+		else
+		{
+			form.submit()
+		}
+	
+	}
+	</script>
+</head>
+<body>
+<form action="" method="post" style="padding: 10px; font-size: 20px">
+	<b>Select the company to add : </b>
+	<select name="company_name">
+		<option disabled selected value="none"> -- select an option -- </option>
+		<option value="RAMRAJ">RAMRAJ</option>
+		<option value="POOMEX">POOMEX</option>
+	</select><br><br>
+	<b>Enter credit amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+	<input type="text" name="credit_amount">
+	<br><br>
+	<input type="button" value="Add Credit" onclick="ValidateForm(this.form)">
+</form>
+</body>
+</html>
